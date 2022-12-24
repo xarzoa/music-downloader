@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/node": "^18.0.6",
     "decrypt-tracks": "^1.0.1",
+    "dotenv": "^16.0.3",
     "ffmpeg": "^0.0.4",
     "grammy": "^1.12.1",
     "node-fetch": "^3.2.6",
