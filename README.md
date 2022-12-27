@@ -26,11 +26,11 @@ A bot will get music ```metadata``` from spotify and download actual song from Y
   ```
   add,
     - ```TOKEN``` - telegram bot token from [Botfather](https://t.me/botfather)*
-    - ```ID``` - spotify client id*
-    - ```SECRET``` - spotify client secret*
+    - ```ID``` - spotify client id* from [spotify developers](https://developers.spotify.com)
+    - ```SECRET``` - spotify client secret* from [spotify developers](https://developers.spotify.com)
     - ```DUMP``` - channel for collect user ids*
   
-  *all those envs are **required**
+  *all those envs are **required**.
   
 - build docker image
   ```sh
@@ -44,10 +44,11 @@ A bot will get music ```metadata``` from spotify and download actual song from Y
 
 that's it. you just deployed your own bot that downloads music for ya. 
 
-## ps 
+## ps
 
+- this never ban your spotify account. but there's rate limit on requesting metadata, watch out.
 - if there any bugs, let's talk in discussion.
 - there maybe too many bugs. i just made this within 3hours :l
 - pull requests are welcomed.
 - enjoy :d
-- forgot to add license, but stealing never make you programmer *bitch*
+- forgot to add license, but stealing never make you programmer *biiiitch*
