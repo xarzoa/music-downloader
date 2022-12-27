@@ -1,8 +1,8 @@
-# Spotify downloader bot
+# music downloader bot
 
 A bot will get music ```metadata``` from spotify and download actual song from YouTube Music (Quality: 128kbps). Yeah, I know quality kinda sucks.
 
-## Deploy
+## deploy
 
 - update and upgrade packages
   ```sh
