@@ -16,8 +16,8 @@ A bot will get music ```metadata``` from spotify and download actual song from Y
 
 - clone the repo go to working dir
   ```sh
-  git clone https://github.com/xarzoa/SpotifyDL
-  cd SpotifyDL
+  git clone https://github.com/xarzoa/music-downloader
+  cd music-downloader
   ```
 
 - create **```.env```** file
