@@ -35,7 +35,7 @@ bot.command("start", (ctx) => {
 
 
 bot.command('uptime', (ctx) => {
-  ctx.reply(`<b>Bot uptime:</b> ${((new Date(os.uptime()*1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0])}`, {
+  ctx.reply(`<b>Bot uptime:</b> ${new Date(os.uptime() * 1000).toISOString().substring(11, 16)}`, {
     reply_to_message_id: ctx.message.message_id,
     parse_mode: 'HTML'
   })
