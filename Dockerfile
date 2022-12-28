@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt install nodejs ffmpeg npm
+RUN apt install -y nodejs ffmpeg npm
 
 RUN npm install
 
