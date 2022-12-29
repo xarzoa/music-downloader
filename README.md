@@ -11,7 +11,7 @@ A bot will get music ```metadata``` from spotify and download actual song from Y
   
 - install some required packages
   ```sh
-  sudo apt -y install docker.io git nodejs npm
+  sudo apt -y install docker.io git
   ```
 
 - clone the repo go to working dir
