@@ -2,8 +2,12 @@ const fs = require('fs')
 const path = require('path');
    
 fs.mkdir(path.join('./', 'downloads'), (err) => {
-    if (err.code === "EEXIST") {
-      return console.info("Directory already exist!, Skipping step...")
+    if(err){
+      if (err.code === "EEXIST") {
+        return console.info("Directory already exist!, Skipping step...")
+      }else{
+        return console.log("Something went wrong!")
+      }
     }else{
       return console.error(err ? err : "Directory created successfully!")
     }
