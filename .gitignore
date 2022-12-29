@@ -1,4 +1,2 @@
-./node_modules
-./replit.nix
-./.env
-./.replit
+node_modules
+.env

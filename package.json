@@ -1,21 +1,19 @@
 {
-  "name": "nodejs",
+  "name": "music-downloader",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node ."
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "xarzoa",
+  "license": "MIT",
   "dependencies": {
-    "@types/node": "^18.0.6",
-    "decrypt-tracks": "^1.0.1",
     "dotenv": "^16.0.3",
-    "ffmpeg": "^0.0.4",
     "grammy": "^1.12.1",
-    "node-fetch": "^3.2.6",
+    "play-dl": "^1.9.6",
+    "spotify-web-api-node": "^5.0.2",
     "spotifydl-core": "^0.2.0"
   }
 }

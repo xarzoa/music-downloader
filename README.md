@@ -29,6 +29,7 @@ A bot will get music ```metadata``` from spotify and download actual song from Y
     - ```ID``` - spotify client id* from [spotify developers](https://developers.spotify.com)
     - ```SECRET``` - spotify client secret* from [spotify developers](https://developers.spotify.com)
     - ```DUMP``` - channel for collect user ids*
+    - ```RFT``` - Spotify refresh token from [SFT Generator](https://spotify-refresh-token-generator.netlify.app/)
   
   *all those envs are **required**.
   
