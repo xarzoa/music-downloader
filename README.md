@@ -25,11 +25,11 @@ A bot will get music ```metadata``` from spotify and download actual song from Y
   sudo nano .env
   ```
   add,
-    - ```TOKEN``` - telegram bot token from [Botfather](https://t.me/botfather)*
+    - ```TOKEN``` - telegram bot token from [botfather](https://t.me/botfather)*
     - ```ID``` - spotify client id* from [spotify developers](https://developers.spotify.com)
     - ```SECRET``` - spotify client secret* from [spotify developers](https://developers.spotify.com)
     - ```DUMP``` - channel for collect user ids*
-    - ```RFT``` - Spotify refresh token from [SRT Generator](https://spotify-refresh-token-generator.netlify.app/)
+    - ```RFT``` - Spotify refresh token from [srt generator](https://spotify-refresh-token-generator.netlify.app/)
   
   *all those envs are **required**.
   
