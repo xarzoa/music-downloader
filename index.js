@@ -13,18 +13,7 @@ var spotifyApi = new Spotify({
   redirectUri: 'http://www.example.com/callback'
 })
 
-spotifyApi.clientCredentialsGrant().then(
-  function(data) {
-    spotifyApi.setAccessToken(data.body['access_token']);
-  },
-  function(err) {
-    console.log('Something went wrong when retrieving an access token', err);
-  }
-);
-
 async function startThings(){
-    spotifyApi.setRefreshToken(process.env['RFT'])
-
     await bot.api.setMyCommands([
       { command: 'start', description: 'Start the bot' },
       { command: 'server', description: 'Server info' },
@@ -68,6 +57,15 @@ bot.command("inline", (ctx) => {
 
 try{
   bot.on("inline_query", async (ctx) => {
+    spotifyApi.clientCredentialsGrant().then(
+      function(data) {
+        spotifyApi.setRefreshToken(process.env['RFT'])
+        spotifyApi.setAccessToken(data.body['access_token']);
+      },
+      function(err) {
+        console.log('Something went wrong when retrieving an access token', err);
+      }
+    );
     try{
 
       const results = []
