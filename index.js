@@ -2,20 +2,20 @@ const { Bot, InputFile, InlineKeyboard } = require("grammy")
 const { clearDownload, countSize} = require('./helpers/fileSystem')
 const { dl } = require('./helpers/download')
 const { start, serverInfo, musicInfo } = require('./helpers/messages')
-const play = require('play-dl');
+const Spotify = require('spotify-web-api-node')
 const env = require('dotenv').config()
 
 const bot = new Bot(process.env['TOKEN']);
 
-async function startThings(){
+var spotifyApi = new Spotify({
+  clientId: process.env['ID'],
+  clientSecret: process.env['SECRET'],
+  redirectUri: 'http://www.example.com/callback'
+})
 
-    await play.setToken({
-      spotify:{
-        client_id: process.env['ID'],
-        client_secret : process.env['SECRET'],
-        refresh_token : process.env['RFT'],
-        market : "LK"
-    }})
+async function startThings(){
+    spotifyApi.setAccessToken(process.env['ACT'])
+    spotifyApi.setRefreshToken(process.env['RFT'])
 
     await bot.api.setMyCommands([
       { command: 'start', description: 'Start the bot' },
@@ -65,7 +65,9 @@ try{
       const results = []
 
       if(ctx.update.inline_query.query){
-        const search = await play.search(ctx.update.inline_query.query, {source: {spotify: 'track'}})
+        
+        const hey = await spotifyApi.searchTracks(ctx.update.inline_query.query)
+        const search = hey.body.tracks.items
         search.forEach( res => {
           const artists = []
           res.artists.forEach(r => artists.push(r.name))
@@ -80,18 +82,18 @@ try{
             id: res.id,
             title:res.name,
             input_message_content: {
-              message_text:res.url,
+              message_text:res.external_urls.spotify,
               parse_mode: "HTML",
             },
             reply_markup: new InlineKeyboard().url(
               res.name,
-              res.url,
+              res.external_urls.spotify,
             ),
-            url: res.url,
+            url: res.external_urls.spotify,
             description: musicInfo(info),
             photo_width: 128,
             photo_height: 128,
-            thumb_url : res.thumbnail.url
+            thumb_url : res.album.images[0].url
           })
         })
       }else{
