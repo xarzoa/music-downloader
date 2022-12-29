@@ -13,8 +13,16 @@ var spotifyApi = new Spotify({
   redirectUri: 'http://www.example.com/callback'
 })
 
+spotifyApi.clientCredentialsGrant().then(
+  function(data) {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  },
+  function(err) {
+    console.log('Something went wrong when retrieving an access token', err);
+  }
+);
+
 async function startThings(){
-    spotifyApi.setAccessToken(process.env['ACT'])
     spotifyApi.setRefreshToken(process.env['RFT'])
 
     await bot.api.setMyCommands([
