@@ -14,9 +14,6 @@ var spotifyApi = new Spotify({
 })
 
 async function startThings(){
-    spotifyApi.setAccessToken(process.env['ACT'])
-    spotifyApi.setRefreshToken(process.env['RFT'])
-
     await bot.api.setMyCommands([
       { command: 'start', description: 'Start the bot' },
       { command: 'server', description: 'Server info' },
