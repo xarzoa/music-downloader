@@ -94,7 +94,7 @@ try{
               parse_mode: "HTML",
             },
             reply_markup: new InlineKeyboard().url(
-              Open Spotify,
+              "Open Spotify",
               res.external_urls.spotify,
             ),
             url: res.external_urls.spotify,
