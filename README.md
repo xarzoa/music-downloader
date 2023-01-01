@@ -52,4 +52,4 @@ that's it. you just deployed your own bot that downloads music for ya.
 - there maybe too many bugs. i just made this within 3hours :l
 - pull requests are welcomed.
 - enjoy :d
-- forgot to add license, but stealing never make you programmer *biiiitch*
+- forgot to add license, but stealing never makes you programmer *biiiitch*
