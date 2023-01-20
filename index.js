@@ -105,13 +105,13 @@ try{
       }else{
         results.push({
           type: "article",
-          id: 'error',
-          title: 'Something went wrong!',
+          id: 'empty',
+          title: 'Enter some text!',
           input_message_content: {
-            message_text: '/server',
+            message_text: 'https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT',
             parse_mode: "HTML",
           },
-          description: "Somehing went wrong, Try again later."
+          description: "Enter some text for query or touch this"
         })
       }
       
