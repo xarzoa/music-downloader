@@ -53,3 +53,7 @@ that's it. you just deployed your own bot that downloads music for ya.
 - pull requests are welcomed.
 - enjoy :d
 - forgot to add license, but stealing never makes you programmer *biiiitch*
+
+## thanks 
+
+- the owners of all the packages i used on this.
