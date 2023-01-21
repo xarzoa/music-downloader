@@ -47,10 +47,9 @@ that's it. you just deployed your own bot that downloads music for ya.
 
 ## ps
 
-- this never ban your spotify account. but there's rate limit on requesting metadata, watch out.
-- if there any bugs, let's talk in discussion.
+- this will never ban your spotify account. but there's rate limit on requesting metadata, watch out.
+- prs are welcome.
 - there maybe too many bugs. i just made this within 3hours :l
-- pull requests are welcomed.
 - enjoy :d
 - forgot to add license, but stealing never makes you programmer *biiiitch*
 
